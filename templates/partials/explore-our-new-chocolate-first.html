@@ -1,0 +1,47 @@
+{% load static %}
+<!-- modal -->
+
+<div class="backdrop is-hidden" data-explore>
+    <div class="modal">
+        <picture>
+            <source
+                    srcset="{% static 'img/explore_our_new_chocolate_first/explore_desk.jpg' %} 1x, {% static 'img/explore_our_new_chocolate_first/explore_desk_2x.jpg' %} 2x"
+                    media="(min-width: 1200px)"
+            />
+            <source
+                    srcset="{% static 'img/explore_our_new_chocolate_first/explore_tablet.jpg' %} 1x, {% static 'img/explore_our_new_chocolate_first/explore_tablet_2x.jpg' %} 2x"
+                    media="(min-width: 768px)"
+            />
+            <source
+                    srcset="{% static 'img/explore_our_new_chocolate_first/explore_mobile.jpg' %} 1x, {% static 'img/explore_our_new_chocolate_first/explore_mobile_2x.jpg' %} 2x"
+                    media="(min-width: 375px)"
+            />
+            <img
+                    src="{% static 'img/explore_our_new_chocolate_first/explore_mobile.jpg' %}"
+                    alt="photo"
+                    class="img-style-radius"
+            />
+        </picture>
+        <button type="button" data-explore-close class="modal-close">
+            <svg class="explore-icon-modal-btn" width="24" height="24">
+                <use href="/static/img/sprite.svg#icon-vector"></use>
+            </svg>
+        </button>
+        <p class="explore-modal-title">
+            Explore our <br/>
+            <span>new chocolate</span> first!
+        </p>
+        <form class="explore-modal-form">
+            <label class="explore-form-label">
+                <input
+                        type="email"
+                        class="explore-form-input"
+                        name="fullname"
+                        placeholder="Enter your email"
+                        required
+                />
+            </label>
+            <button type="submit" class="explore-form-btn btn">Submit</button>
+        </form>
+    </div>
+</div>
